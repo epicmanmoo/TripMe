@@ -1,3 +1,4 @@
 # TripMe
 
-### //![Text](appVidGif.gif)
+### *Main Feature:*
+### //![Gif of app](appVidGif.gif)
