@@ -6,3 +6,5 @@
 
 #### *Main Feature:*
 ##### ![Gif of main feature](appVidGif.gif)
+
+### You will need to add your own API Keys to use Google services.
