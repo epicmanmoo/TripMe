@@ -21,7 +21,7 @@ import static com.example.tripme.BookTripActivity.pd;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    private TextView loc, event;
+    private TextView loc, event, dur;
     private ImageView pic;
     private FitButton change;
     private ImageView pics;
@@ -38,35 +38,46 @@ public class ResultsActivity extends AppCompatActivity {
         change = findViewById(R.id.changeEverything);
         event = findViewById(R.id.event);
         pics = findViewById(R.id.picture);
-        final List<Events> day = buildDay(toLoc);
-	pd.dismiss();
-        change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(count >= day.size()){
-                    count = 0;
-                } else {
-                    loc.setText(day.get(count).getPlace());
-                    event.setText(day.get(count).getType());
-                    switch(day.get(count).getType()){
-                        case "Hotels":
-                            pics.setImageResource(R.drawable.hotel);
-                            break;
-                        case "Restaurants":
-                            pics.setImageResource(R.drawable.restaurant);
-                            break;
-                        case "Transit":
-                            Toast.makeText(getApplicationContext(), "Duration: " + day.get(count).getUberDuration() + " minutes", Toast.LENGTH_LONG).show();
-                            pics.setImageResource(R.drawable.lyft);
-                            break;
-                        case "Attractions":
-                            pics.setImageResource(R.drawable.destinations);
+        dur = findViewById(R.id.duration);
+        try {
+            final List<Events> day = buildDay(toLoc);
+            pd.dismiss();
+            change.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (count >= day.size()) {
+                        count = 0;
+                    } else {
+                        dur.setVisibility(View.INVISIBLE);
+                        loc.setText(day.get(count).getPlace());
+                        event.setText(day.get(count).getType());
+                        switch (day.get(count).getType()) {
+                            case "Hotels":
+                                pics.setImageResource(R.drawable.hotel);
+                                break;
+                            case "Restaurants":
+                                pics.setImageResource(R.drawable.restaurant);
+                                break;
+                            case "Transit":
+                                //Toast.makeText(getApplicationContext(), "Duration: " + day.get(count).getUberDuration() + " minutes", Toast.LENGTH_LONG).show();
+                                dur.setVisibility(View.VISIBLE);
+                                dur.setText("Duation: " + day.get(count).getUberDuration() + " minutes");
+                                pics.setImageResource(R.drawable.lyft);
+                                break;
+                            case "Attractions":
+                                pics.setImageResource(R.drawable.destinations);
+                        }
+
+
+                        count++;
                     }
-
-
-                    count++;
                 }
-            }
-        });
+            });
+        }
+        catch(NullPointerException e){
+            pd.dismiss();
+            Toast.makeText(getApplicationContext(), "Please try a different location!", Toast.LENGTH_LONG).show();
+            finish();
+        }
     }
 }
