@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookTripActivity">
+
+    <EditText
+        android:id="@+id/toLocation"
+        android:layout_width="210dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="320dp"
+        android:hint="To Location"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/toSurvey"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="155dp"
+        android:gravity="center"
+        app:fb_backgroundColor="#11D5C5"
+        app:fb_shape="rectangle"
+        app:fb_text="Next"
+        app:fb_textAllCaps="true"
+        app:fb_textColor="#FFF"
+        app:fb_textPaddingEnd="16dp"
+        app:fb_textPaddingStart="16dp"
+        app:fb_textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toLocation" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Choose Destination"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

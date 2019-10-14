@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diet">
+        <item>No Selection</item>
+        <item>No Restriction</item>
+        <item>Vegetarian</item>
+        <item>Vegan</item>
+    </string-array>
+</resources>
