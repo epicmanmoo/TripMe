@@ -1,8 +1,8 @@
 # TripMe
-#### An app, powered with AI, which allows us to give you travel choices based on your preferences.
+## An app, powered with AI, which allows us to give you travel choices based on your preferences.
 
-##### *Preferences Area:*
+#### *Preferences Feature:*
 ##### ![Gif of preferences feature](appPrefGif.gif)
 
-##### *Main Feature:*
+#### *Main Feature:*
 ##### ![Gif of main feature](appVidGif.gif)
