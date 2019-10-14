@@ -1,3 +1,3 @@
 # TripMe
 
-### //![](appVideo.wmv)
+### //![Text](appVidGif.gif)
