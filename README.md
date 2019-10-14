@@ -1,5 +1,6 @@
 # TripMe
 ## An app, powered with AI, which allows us to give you travel choices based on your preferences.
+### Made by @MichaelEizaguirre, @sohaibmoinuddin, @utsavgoswami, and, of course, myself.
 
 #### *Preferences Feature:*
 ##### ![Gif of preferences feature](appPrefGif.gif)
