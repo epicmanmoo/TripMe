@@ -15,6 +15,7 @@ public class BookTripActivity extends AppCompatActivity {
 
     private FitButton toSurvey;
     private EditText toL;
+    public static ProgressDialog pd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,9 @@ public class BookTripActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Fields must not be empty", Toast.LENGTH_LONG).show();
                 }
                 else {
+		    pd = new ProgressDialog(BookTripActivity.this);
+                    pd.setMessage("Generating Results! Please wait...");
+                    pd.show();
                     Intent toSurvey = new Intent(getApplicationContext(), ResultsActivity.class);
                     String toLoc = toL.getText().toString();
                     toSurvey.putExtra("toLocation", toLoc);

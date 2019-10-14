@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.tripme.TripMaker.buildDay;
+import static com.example.tripme.BookTripActivity.pd;
 
 public class ResultsActivity extends AppCompatActivity {
 
@@ -38,8 +39,7 @@ public class ResultsActivity extends AppCompatActivity {
         event = findViewById(R.id.event);
         pics = findViewById(R.id.picture);
         final List<Events> day = buildDay(toLoc);
-
-
+	pd.dismiss();
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
